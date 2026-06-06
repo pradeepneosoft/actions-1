@@ -10,10 +10,10 @@ jobs:
           uses: actions/checkout@v6
         
         - name: Install cowsey program
-          run: sudo apt-get install cowsey -y
+          run: sudo apt-get install cowsay -y
        
         - name: Execute cowsey cmd 
-          run: cowsey -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+          run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
 
         - name: Test file exists
           run: grep -irn "dragon" gragon.txt
