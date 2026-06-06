@@ -14,6 +14,6 @@ jobs:
         
         - name: Execute shell script
           run: |
-            sudo chmod 777 ascii-script.sh
+            chmod +x ascii-script.sh
             ./ascii-script.sh
         
