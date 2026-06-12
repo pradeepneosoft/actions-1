@@ -5,7 +5,7 @@ on:
 
 jobs:
     first:
-        timeout-minute: 1
+        timeout-minutes: 1
         runs-on: ubantu-latest
         steps:
         - name: first job
@@ -15,7 +15,7 @@ jobs:
     second:
         runs-on: ubantu-latest
         needs: first
-        timeout-minute: 1
+        timeout-minutes : 1
         steps:
         - name: second job 
           run: |
