@@ -3,8 +3,9 @@ name: concurrency
 on:
     [workflow_dispatch,push]
 
-jobs:
+jobs
     first:
+        timeout-minute: 1
         runs-on: ubantu-latest
         steps:
         - name: first job
@@ -14,6 +15,7 @@ jobs:
     second:
         runs-on: ubantu-latest
         needs: first
+        timeout-minute: 1
         steps:
         - name: second job 
           run: |
