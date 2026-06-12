@@ -10,7 +10,7 @@ jobs:
         steps:
         - name: first job
           run: |
-            echo "sleep for 10 second"
+            echo sleep for 10 second
             sleep 10
     second:
         runs-on: ubantu-latest
@@ -19,7 +19,7 @@ jobs:
         steps:
         - name: second job 
           run: |
-            echo "sleep for 600 second"
+            echo sleep for 600 second
             sleep 600s   
 
           
