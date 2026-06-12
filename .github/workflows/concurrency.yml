@@ -9,7 +9,7 @@ jobs:
         runs-on: ubantu-latest
         steps:
         - name: first job
-          run: 
+          run: |
             echo "sleep for 10 second"
             sleep 10
     second:
