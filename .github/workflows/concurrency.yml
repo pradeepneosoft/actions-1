@@ -14,9 +14,6 @@ jobs:
     second:
         runs-on: ubantu-latest
         needs: first
-        concurrency: 
-            group: priority job
-            cancel-in-progress: true
         steps:
         - name: second job 
           run: |
