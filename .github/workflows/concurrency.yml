@@ -3,7 +3,7 @@ name: concurrency
 on:
     [workflow_dispatch,push]
 
-jobs
+jobs:
     first:
         timeout-minute: 1
         runs-on: ubantu-latest
