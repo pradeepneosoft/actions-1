@@ -6,3 +6,4 @@ cat elephant.txt
 ls -ltra
 
 # some random text
+# skipping the CI
