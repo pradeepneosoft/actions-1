@@ -1,0 +1,28 @@
+name: Workflow filter testing
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+      - '!feature/*' # ignoring all branches starting with feature/ ! used here to ignore branches
+#   branches-ignore:
+#       - 'feature/*' # ignoring all branches starting with feature/ this is another way to ignore branches   
+#       - 'bug/*' # ignoring all branches starting with bug/ this is another way to ignore branches
+  pull_request:
+    types: 
+      - opened
+      - closed
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**' # ignoring all changes in docs folder
+      - '**.md' # ignoring all markdown files
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print github context event
+        run: echo "Event name is ${{ github.event_name }}"
