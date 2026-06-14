@@ -6,4 +6,4 @@ cat elephant.txt
 ls -ltra
 
 # some random text
-# skipping the CI
+# skipping the CI with  git commit -m "[skip ci]"
